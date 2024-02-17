@@ -1,0 +1,99 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center; /* Align slides vertically */
+    justify-content: center; /* Align slides horizontally */
+}
+
+.mySlides {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.slide-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image fits within the slide */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: transparent; /* Transparent buttons */
+    border: none; /* Remove border if any */
+}
+
+.prev {
+    left: 0; /* All the way to the left */
+}
+
+.next {
+    right: 0; /* All the way to the right */
+}
+
+.toggle-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+    background: #555;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+/* The toggle inside the checkbox */
+.checkmark:after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Change background of slider when checked (full view) */
+.toggle-container input:checked + .checkmark {
+    background-color: #2196F3;
+}
+
+/* Move the toggle inside the checkbox to the right when checked (full view) */
+.toggle-container input:checked + .checkmark:after {
+    transform: translateX(36px);
+}
+
